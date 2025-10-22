@@ -6,7 +6,10 @@ import (
 )
 
 func pinpan() {
-	fmt.Println("PinPan")
+	fmt.Println("============")
+	fmt.Println("PinPan Game")
+	fmt.Println("============")
+
 	response := ""
 	for i := 1; i <= 100; i++ {
 
