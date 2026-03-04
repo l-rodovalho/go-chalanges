@@ -13,7 +13,7 @@ func pingPong(channel chan string) {
 			channel <- "Pong"
 		}
 
-		time.Sleep(800 * time.Millisecond)
+		time.Sleep(850 * time.Millisecond)
 	}
 }
 
@@ -21,7 +21,6 @@ func print(channel chan string) {
 	for {
 		message := <- channel
 		fmt.Println(message)
-		time.Sleep(800 * time.Millisecond)
 	}
 }
 
@@ -31,6 +30,5 @@ func main() {
 	go pingPong(channelPingPong)
 	go print(channelPingPong)
 
-	var entry string
-	fmt.Scanln(&entry)
+	select {}
 }
